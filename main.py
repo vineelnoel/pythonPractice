@@ -1,7 +1,15 @@
+def args_method(a, b, *args):
+    add = a + b
+    for num in args:
+        add += num
+    return add
+
+
 class Practice:
     """
     Decorator example
     """
+
     @staticmethod
     def convert_upper(func):
         def wrapper(self):
@@ -62,4 +70,5 @@ if __name__ == '__main__':
     practice_obj = Practice()
     # print(practice_obj.some_func())
     # print(practice_obj.say_hello("Vineel","Noel"))
-    practice_obj.fibonacci_series(8)
+    # practice_obj.fibonacci_series(8)
+    print(args_method(1, 2, 3, 4))
